@@ -1,0 +1,12 @@
+<% if user_signed_in? %>
+  <%= form_with model: @article ,url: articles_path, local: true do |f| %>
+    タイトル
+    <%= f.text_area :title %>
+    <br>
+    内容
+    <%= f.text_area :content %>
+    <br>
+    <%= f.submit "投稿" %>
+  <% end %>
+<% else %>
+<% end %>
